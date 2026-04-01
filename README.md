@@ -16,7 +16,7 @@ The dataset used is the **2023 version** by Nelgiriye Withana (Kaggle).
 - **Size:** 568,630 total transactions.
 - **Features:** 28 anonymized PCA-transformed variables (`V1`-`V28`) and a transaction `Amount`.
 - **Target:** `Class` (0: Legitimate, 1: Fraud).
-- **Balance:** This dataset is **pre-balanced (50/50 split)**, providing a controlled environment for testing model architectures without the bias issues found in the original 2017 imbalanced dataset.
+- **Balance:** This dataset is **pre-balanced (50/50 split)**, providing a controlled environment for testing model architectures without the bias issues found in the original 2013 imbalanced dataset.
 
 ---
 
