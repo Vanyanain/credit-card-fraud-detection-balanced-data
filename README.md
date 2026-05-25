@@ -2,7 +2,7 @@
 
 An advanced, feature-rich machine learning suite and glassmorphic Streamlit dashboard designed to detect, analyze, and inspect credit card fraud. Equipped with six state-of-the-art classifier models trained on a balanced dataset of credit card transactions.
 
-Live Web Application: **[Deployed on Streamlit Community Cloud](https://credit-card-fraud-detection-balanced-data-ekft7frbmnbtpbmeh8hj.streamlit.app/)**
+Live Web Application: **[Deployed on Streamlit Community Cloud](https://credit-card-fraud-detection-balanced-data-ekft7frbmnbtpbmhe8hj.streamlit.app/)**
 
 ---
 
