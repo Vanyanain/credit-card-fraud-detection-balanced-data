@@ -189,7 +189,7 @@ st.sidebar.info(model_descriptions[model_key])
 def load_csv_samples(file_path):
     """Loads a balanced subset of transactions from the massive 324MB CSV file for quick testing."""
     if not file_path.exists():
-        return None, None
+        return None, None, f"File does not exist at absolute path: {file_path.resolve()}"
     try:
         # Since reading a 324MB CSV takes ~3 seconds, cache it
         df = pd.read_csv(file_path)
@@ -203,13 +203,12 @@ def load_csv_samples(file_path):
         safe_features = safe.drop(columns=[col for col in features_to_drop if col in safe.columns])
         fraud_features = fraud.drop(columns=[col for col in features_to_drop if col in fraud.columns])
         
-        return safe_features, fraud_features
+        return safe_features, fraud_features, None
     except Exception as e:
-        st.warning(f"Unable to preload real transactions from creditcard_2023.csv: {e}")
-        return None, None
+        return None, None, f"Error reading CSV file: {e}"
 
 # Load testing samples
-safe_samples, fraud_samples = load_csv_samples(DATA_PATH)
+safe_samples, fraud_samples, samples_error = load_csv_samples(DATA_PATH)
 
 # Initialize Session State for individual feature values if not already present
 if "manual_features" not in st.session_state:
@@ -362,7 +361,7 @@ with tab2:
                     populate_fields(safe_samples)
                     st.toast("Real Legitimate Transaction features loaded!", icon="🟢")
                 else:
-                    st.error("Real dataset samples not loaded.")
+                    st.error(f"Real dataset samples not loaded. Reason: {samples_error}")
                     
         with col_btn2:
             if st.button("🔴 Load Random Fraud Case", use_container_width=True):
@@ -370,7 +369,7 @@ with tab2:
                     populate_fields(fraud_samples)
                     st.toast("Real Fraudulent Transaction features loaded!", icon="🔴")
                 else:
-                    st.error("Real dataset samples not loaded.")
+                    st.error(f"Real dataset samples not loaded. Reason: {samples_error}")
                     
         with col_btn3:
             if st.button("🔄 Reset to Neutral (Zeros)", use_container_width=True):
