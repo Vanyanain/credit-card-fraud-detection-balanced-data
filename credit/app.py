@@ -135,7 +135,7 @@ st.markdown("""
 # Define directories
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = BASE_DIR / "model_outputs"
-DATA_PATH = BASE_DIR / "creditcard_2023.csv"
+DATA_PATH = BASE_DIR / "creditcard_samples.csv"
 
 # Model human names to keys map
 MODEL_MAP = {
