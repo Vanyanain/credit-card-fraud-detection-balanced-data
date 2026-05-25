@@ -552,7 +552,8 @@ with tab3:
                     
                     # Highlight fraud rows in the table
                     def highlight_fraud(row):
-                        return ['background-color: rgba(239, 68, 68, 0.15); color: #EF4444;' if row["Fraud_Prediction"] == 1 else '' for _ in row]
+                        is_fraud = result_df.loc[row.name, "Fraud_Prediction"] == 1
+                        return ['background-color: rgba(239, 68, 68, 0.15); color: #EF4444;' if is_fraud else '' for _ in row]
                     
                     # Order columns nicely
                     cols_order = ["Prediction_Label", "Fraud_Probability"] + req_features
