@@ -1,6 +1,9 @@
 # 🛡️ FraudShield AI: Real-Time Credit Card Fraud Detection
 
-An advanced, feature-rich machine learning suite and glassmorphic Streamlit dashboard designed to detect, analyze, and inspect credit card fraud. Equipped with six state-of-the-art classifier models trained on a balanced dataset of credit card transactions.
+An advanced, feature-rich machine learning suite and glassmorphic Streamlit dashboard designed to detect, analyze, and inspect credit card fraud. Equipped with six state-of-the-art classifier models trained on a balanced dataset of credit card transactions.It shows when we balanced the full dataset first and then split:
+
+the model indirectly sees patterns from test data
+metrics become unrealistically perfect
 
 Live Web Application: **[Deployed on Streamlit Community Cloud](https://credit-card-fraud-detection-balanced-data-ekft7frbmnbtpbmhe8hj.streamlit.app/)**
 
