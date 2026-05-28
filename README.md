@@ -57,49 +57,5 @@ The classifiers were trained on a balanced dataset (568,630 rows) with the follo
 
 ---
 
-## 🚀 Getting Started (Local Run)
-
-Follow these steps to run the training pipeline and launch the dashboard locally on your Mac/PC:
-
-### 1. Prerequisites
-Make sure you have Python 3.9+ installed. Clone this repository and navigate inside:
-```bash
-git clone https://github.com/Vanyanain/credit-card-fraud-detection-balanced-data.git
-cd credit-card-fraud-detection-balanced-data
-```
-
-### 2. Install Dependencies
-Install all required libraries using pip:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Train & Save Models (Optional)
-The pre-trained model files are already saved in `model_outputs/`. If you wish to retrain them on the full dataset:
-1. Place the `creditcard_2023.csv` dataset in the root folder.
-2. Run the training pipeline:
-   ```bash
-   python train_models.py
-   ```
-
-### 4. Launch the Dashboard
-Start the Streamlit application:
-```bash
-streamlit run app.py
-```
-A browser tab will automatically open at **[http://localhost:8501](http://localhost:8501)**!
-
----
-
-## ☁️ Cloud Deployment
-
-This app is optimized for direct hosting on **Streamlit Community Cloud** (completely free):
-
-1. Commit and push all files to your GitHub repository.
-2. Go to **[share.streamlit.io](https://share.streamlit.io/)** and log in with your GitHub account.
-3. Click **"New app"**, select this repository, select the **`main`** branch, set the main file path to **`app.py`**, and click **"Deploy"**!
-
----
-
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
